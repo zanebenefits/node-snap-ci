@@ -1,7 +1,7 @@
 snap-ci api
 ===========
 
-Very basic, unofficial npm module to interact with the Snap-ci[https://snap-ci.com] API.
+Very basic, unofficial npm module to interact with the [Snap-CI](https://snap-ci.com) API.
 
 ##Usage##
 
