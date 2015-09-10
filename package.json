@@ -1,0 +1,27 @@
+{
+  "name": "snap-ci-api",
+  "version": "0.1.0",
+  "description": "Unofficial npm module to interact with Snap's api",
+  "keywords": [
+    "snap-ci"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "test:watch": "watch jasmine ./"
+  },
+  "author": "Ryan Ray <ryan@ryanray.me>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zanebenefits/snap-ci-api.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^2.10.0",
+    "request": "^2.61.0"
+  },
+  "devDependencies": {
+    "proxyquire": "^1.7.2",
+    "watch": "^0.16.0"
+  }
+}
