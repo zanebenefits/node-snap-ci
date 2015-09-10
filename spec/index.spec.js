@@ -7,6 +7,9 @@ describe('api constructor', function() {
   var opts;
 
   beforeEach(function() {
+    process.env.NPM_SNAP_API_KEY = '';
+    process.env.NPM_SNAP_API_USER = '';
+    process.env.NPM_SNAP_API_OWNER = '';
     opts = validOptions();
   });
 
@@ -14,21 +17,21 @@ describe('api constructor', function() {
     expect(function() {
       opts.apiKey = null;
       snap(opts);
-    }).toThrow(new Error('apiKey is required!'));
+    }).toThrow(new Error('apiKey is required as an option or NPM_SNAP_API_KEY env variable'));
   });
 
   it('should require an apiUser', function() {
     expect(function() {
       opts.apiUser = null;
       snap(opts);
-    }).toThrow(new Error('apiUser is required!'));
+    }).toThrow(new Error('apiUser is required as an option or NPM_SNAP_API_USER env variable'));
   });
 
   it('should require an apiOwner', function() {
     expect(function() {
       opts.apiOwner = null;
       snap(opts);
-    }).toThrow(new Error('apiOwner is required!'));
+    }).toThrow(new Error('apiOwner is required as an option or NPM_SNAP_API_OWNER env variable'));
   });
 
   it('should expose relevant apis', function() {
@@ -39,7 +42,6 @@ describe('api constructor', function() {
   });
 
   it('should allow required fields to be environment variables', function() {
-    var proxyquire =  require('proxyquire');
     var pipelineSpy = jasmine.createSpy('pipeline');
     var triggerSpy = jasmine.createSpy('trigger');
 
@@ -67,10 +69,6 @@ describe('api constructor', function() {
       API_OWNER: 'env-api-owner',
       SNAP_URI: 'https://env-api-user:env-api-key@api.snap-ci.com'
     });
-
-    process.env.NPM_SNAP_API_KEY = null;
-    process.env.NPM_SNAP_API_USER = null;
-    process.env.NPM_SNAP_API_OWNER = null;
 
   });
 
