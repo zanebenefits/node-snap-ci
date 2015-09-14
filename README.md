@@ -8,7 +8,7 @@ Very basic, unofficial npm module to interact with the [Snap-CI](https://snap-ci
 ###Authentication###
 You can pass credentials into the api constructor:
 ```
-var snap = require('snap-ci-api')({
+var snap = require('node-snap-ci')({
   apiKey: 'my-api-key',
   apiUser: 'my-api-user',
   apiOwner: 'api-owner'
@@ -23,7 +23,7 @@ export NPM_SNAP_API_OWNER = 'api-owner'
 
 ----
 
-var snap = require('snap-ci-api')();
+var snap = require('node-snap-ci')();
 ```
 
 ###Pipelines###

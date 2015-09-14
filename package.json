@@ -1,5 +1,5 @@
 {
-  "name": "snap-ci-api",
+  "name": "node-snap-ci",
   "version": "0.1.0",
   "description": "Unofficial npm module to interact with Snap's api",
   "keywords": [
@@ -13,7 +13,7 @@
   "author": "Ryan Ray <ryan@ryanray.me>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zanebenefits/snap-ci-api.git"
+    "url": "https://github.com/zanebenefits/node-snap-ci.git"
   },
   "license": "ISC",
   "dependencies": {
