@@ -2,6 +2,7 @@ snap-ci api
 ===========
 
 [![Build Status](https://snap-ci.com/zanebenefits/node-snap-ci/branch/master/build_image)](https://snap-ci.com/zanebenefits/node-snap-ci/branch/master)
+[![NPM version](https://badge.fury.io/js/node-snap-ci.png)](http://badge.fury.io/js/node-snap-ci)
 
 Very basic, unofficial npm module to interact with the [Snap-CI](https://snap-ci.com) API.
 
