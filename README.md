@@ -3,9 +3,12 @@ snap-ci api
 
 Very basic, unofficial npm module to interact with the [Snap-CI](https://snap-ci.com) API.
 
-##Usage##
+## Installation
+`npm install node-snap-ci`
 
-###Authentication###
+##Usage
+
+###Authentication
 You can pass credentials into the api constructor:
 ```
 var snap = require('node-snap-ci')({
@@ -26,10 +29,10 @@ export NPM_SNAP_API_OWNER = 'api-owner'
 var snap = require('node-snap-ci')();
 ```
 
-###Pipelines###
+###Pipelines
 Branch Name is optional on all methods except but `byCounter`. When the branch is not provided it defaults to `master`.
 
-####Get all pipelines for a project####
+####Get all pipelines for a project
 
 ```
 snap.pipelines.all('my-github-project', 'my-branch').then(function(data) {
@@ -37,7 +40,7 @@ snap.pipelines.all('my-github-project', 'my-branch').then(function(data) {
 });
 ```
 
-####Get specific pipeline by counter####
+####Get specific pipeline by counter
 
 ```
 snap.pipelines.byCounter('my-github-project', 'my-branch', 23).then(function(data) {
@@ -45,7 +48,7 @@ snap.pipelines.byCounter('my-github-project', 'my-branch', 23).then(function(dat
 });
 ```
 
-####Get latest pipeline####
+####Get latest pipeline
 
 ```
 snap.pipelines.latest('my-github-project', 'my-branch').then(function(data) {
@@ -53,7 +56,7 @@ snap.pipelines.latest('my-github-project', 'my-branch').then(function(data) {
 });
 ```
 
-####Get oldest pipeline####
+####Get oldest pipeline
 
 ```
 snap.pipelines.oldest('my-github-project', 'my-branch').then(function(data) {
@@ -61,35 +64,35 @@ snap.pipelines.oldest('my-github-project', 'my-branch').then(function(data) {
 });
 ```
 
-###Trigger###
+###Trigger
 
-####Trigger a whole new pipeline####
+####Trigger a whole new pipeline
 
 ```
 snap.trigger.pipeline('my-github-project', 'my-branch');
 ```
 
-####Trigger a manual stage in an existing pipeline####
+####Trigger a manual stage in an existing pipeline
 
 ```
 snap.trigger.stage('my-github-project', 'my-branch', 23, 'deploy-production');
 ```
 
 
-##Contributing##
-Install jasmine and watch globally? `npm install -g jasmine watch`
+##Contributing
+Install jasmine and watch globally `npm install -g jasmine watch`
 
 Run tests: `npm run test`
 
 Development Mode: `npm run test:watch`
 
-##TODO##
+##TODO
 So many things...
 * Pagination
 * Pull request pipelines
 * Artifact Client
 
-##License##
+##License
 
 This software is licensed under the Apache 2 license, quoted below.
 
